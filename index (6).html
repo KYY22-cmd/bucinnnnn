@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peluk Mas, Ya?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f5;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 600px;
+    }
+    .typewriter {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #444;
+      white-space: pre-line;
+    }
+    .gif {
+      width: 250px;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      margin-top: 2rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff99ac;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #ffb6c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="gif" src="https://media.tenor.com/SI7bvyzIa5YAAAAi/hug-love.gif" alt="hug" />
+    <p id="typewriter" class="typewriter"></p>
+    <button onclick="saySorry()">Peluk mas 🤍</button>
+  </div>
+
+  <script>
+    const text = `Hey kamu...
+
+Maaf kalau aku bikin kamu ngerasa sendiri.
+Kadang aku terlalu tenggelam di pikiranku sendiri,
+sampai lupa kamu juga sedang berjuang...
+
+Kamu gak salah karena berharap aku hadir lebih.
+Karena kamu memang pantas untuk dicintai dengan sepenuh hati.
+
+Mungkin aku belum jadi yang paling baik,
+tapi aku mau jadi yang paling tulus mencintai kamu.
+
+Boleh gak... kita mulai dari peluk dulu? 🤍`;
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+      }
+    }
+    typeWriter();
+
+    function saySorry() {
+      alert("Makasih udah gak marah... peluk terus ya 🥺💗");
+    }
+  </script>
+</body>
+</html>
